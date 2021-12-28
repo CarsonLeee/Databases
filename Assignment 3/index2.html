@@ -1,0 +1,146 @@
+<!--Name: 92-->
+<!--Homepage, displays all the available options-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="index2.css">
+        <meta charset="utf-8">
+        <title>Trip Booking Database</title>
+    </head>
+
+    <?php
+        include 'connectdb.php';
+    ?>
+
+    <!--List all the Bus Trip Data and allows the user to order the courses by Trip Name OR by Country-->
+    <body>
+        <div class="Title">
+            <h1><span>Trip Booking Database</span></h1>
+        </div>
+        <div class="Subtitle">
+            <form action="getorderedbtdata.php" method="post">
+                <h2>List Bus Trip Data by Trip Name or Country:</h2>
+                <form action="countryinformation.php" method="post">
+                <h3>Click the button below to list the Bus Trip Data where you can order by Trip Name OR by Country:</h3>
+                <!--Creates button for user to click-->
+                <input type="submit" name="tripDataButton" value="Show me the bus trips">
+            </form>
+        </div>
+    </body>
+
+    <!--Allow the user to select one of the Bus Trips listed and change the trip name, start date or end date and the image URL-->
+    <body>
+        <div class="Subtitle">
+            <h2>Change Trip Name, Start Date, End Date or Image URL of a trip:</h2>
+            <form action="changetripdetails.php" method="post">
+                <h3>Click the button below to change a specific trips: Trip Name, Start Date, End Date or Image URL</h3>
+                <!--Creates button for user to click-->
+                <input type="submit" name="changeTripButton" value="Show me the bus trips">
+            </form>
+        </div>
+    </body>
+
+    <!--Allow the user to select one of the trips listed and delete that trip. If the trip has any bookings, make sure you let the user know that that trip cannot be deleted-->
+    <body>
+        <div class="Subtitle">
+            <h2>Delete a Selected Trip Listed:</h2>
+            <form action="deletetrip.php" method="post">
+                <h3>Click the button below to delete a specific trip</h3>
+                <!--Creates button for user to click-->
+                <input type="submit" name="deleteTripButton" value="Show me the trips">
+            </form>
+        </div>
+    </body>
+
+    <!--Allow the user to enter a new trip-->
+    <body>
+        <div class="Subtitle">
+            <h2>Enter a New Trip:</h2>
+            <form action="addnewtrip.php" method="post">
+                <h3>Click the button below to add a new trip into the database</h3>
+                <!--Creates button for user to click-->
+                <input type="submit" name="enterNewTripButton" value="Add a trip">
+            </form>
+        </div>
+    </body>
+
+
+    <!--Allow the user to select a country and see all the bus trips from that country-->
+    <body>
+        <div class="Subtitle">
+            <h2>List Bus Trip Data with Specific Country:</h2>
+            <form action="getbtcountry.php" method="post">
+                <h3>Click the button below to see the bus trip information for a specific country of your choosing</h3>
+                <!--Creates button for user to click-->
+                <input type="submit" name="tripCountryButton" value="Show me the bus trips">
+            </form>
+        </div>
+    </body>
+
+
+    <!--Allow the user to create a booking for a trip-->
+    <body>
+        <div class="Subtitle">
+            <h2>Create a booking for a trip:</h2>
+            <form action="createbookingtrip.php" method="post">
+                <h3>Click the button to create a booking</h3>
+                <!--Creates button for user to click-->
+                <input type="submit" name="createBookingButton" value="Create Booking">
+            </form>
+        </div>
+    </body>
+
+    
+    <!--Prints all the information on the passenger and the passport if selected-->
+    <body>
+        <div class="Subtitle">
+            <h2>List of Information About Passengers and Passports:</h2>
+            <form action="printpassengerandpassport.php" method="post">
+                <h3>Click the button to list all the info about the passengers including passport information in order by last name</h3>
+                <!--Creates button for user to click-->
+                <input type="submit" name="insertTripButton" value="List of passengers">
+            </form>
+        </div>
+    </body>
+
+
+        <!--Select a passenger and see all of his/her bookings-->
+    <body>
+        <div class="Subtitle">
+            <h2>List of Passengers and Bus Trip Bookings:</h2>
+            <form action="getpassengerbookings.php" method="post">
+                <h3>Click the button to list all the passengers and bus trip bookings</h3>
+                <!--Creates button for user to click-->
+                <input type="submit" name="listPassengersButton" value="List of passengers">
+            </form>
+        </div>
+    </body>
+
+
+    <!--Allow the user to delete a booking-->
+    <body>
+        <div class="Subtitle">
+            <h2>Delete a booking trip:</h2>
+            <form action="getdeletebooking.php" method="post">
+                <h3>Click the button to delete a booking</h3>
+                <!--Creates button for user to click-->
+                <input type="submit" name="deleteBookingButton" value="Delete Booking">
+            </form>
+        </div>
+    </body>
+
+
+    <!--List all the bus trips that don't any bookings yet-->
+    <body>
+        <div class="Subtitle">
+            <h2>List of Bus Trips with no Bookings:</h2>
+            <form action="nobookinglist.php" method="post">
+                <h3>Click the button to list all the bus trips that don't have any bookings yet</h3>
+                <!--Creates button for user to click-->
+                <input type="submit" name="listTripNoBookingButton" value="List of trips">
+            </form>
+        </div>
+    </body>
+
+</html>
